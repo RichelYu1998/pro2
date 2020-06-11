@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单</title>
+    <!-- 在style标签内部可以书写css属性和css注释 -->
+    <style type="text/css">
+        /* css注释(注释内容和注释符号之间最好用空格隔开) */
+        table {
+            /* 设置表格边框合并 */
+            border-collapse: collapse;
+            /* 设置背景颜色为'lightgray' */
+            background-color: lightgray;
+            /* 设置表格左右外边距自适应(始终相等)--水平居中 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td, th { /* 选中当前网页中的所有td元素,以及所有的th */
+            /* 为单元格设置边框(宽度、样式) */
+            border: 2px solid red;
+            /* 设置单元格边框和内容之间的距离 */
+            padding: 5px;
+        }
+
+        h1 {
+            /* 设置元素内容在水平方向居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--
+表单项标签:
+(1)input: 普通文本输入框、密码框、单选框、复选框、文件上传、按钮、提交按钮、重置按钮
+(2)select/option: 下拉选框
+(3)textarea: 多行文本输入区域, 比如个人简介
+-->
+<form action="#">
+    <h1>欢迎注册</h1>
+    <table><!-- 设置表格的标题 -->
+        <tr><!-- 用户名 -->
+            <td>用户名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr><!-- 密码 -->
+            <td>密&emsp;&emsp;码:</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr><!-- 性别 -->
+            <td>性&emsp;&emsp;别:</td>
+            <td>
+                <input type="radio" name="gender" value="man" checked="checked"/>男
+                <input type="radio" name="gender" value="woman"/>女
+            </td>
+        </tr>
+        <tr><!-- 爱好 -->
+            <td>爱&emsp;&emsp;好:</td>
+            <td>
+                <input type="checkbox" name="like" name="basketball" checked="checked"/>篮球
+                <input type="checkbox" name="like" name="football"/>足球
+                <input type="checkbox" name="like" name="volleyball"/>排球
+            </td>
+        </tr>
+        <tr><!-- 城市 -->
+            <td>城&emsp;&emsp;市:</td>
+            <td>
+                <select name="city">
+                    <option selected="selected">--选择城市--</option>
+                    <option value="bj">北京</option>
+                    <option value="sh">上海</option>
+                    <option value="gz" >广州</option>
+                    <option value="sz">深圳</option>
+                </select>
+            </td>
+        </tr>
+        <tr><!-- 自我描述 -->
+            <td>自我描述:</td>
+            <td>
+                    <textarea name="description" cols="30" rows="5" placeholder="请输入描述信息">
+                    </textarea>
+            </td>
+        </tr>
+        <tr><!-- 提交 -->
+            <td colspan="2" style="text-align: center">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

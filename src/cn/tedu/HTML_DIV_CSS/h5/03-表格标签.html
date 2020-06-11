@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+    <!-- 在style标签内部可以书写css属性和css注释 -->
+    <style type="text/css">
+        /* css注释(注释内容和注释符号之间最好用空格隔开) */
+        table{
+            /* 设置表格边框合并 */
+            border-collapse:collapse ;
+            /* 为表格设置宽度 */
+            width: 70%;
+            /* 设置背景颜色为'pink' */
+            background-color: pink;
+            /* 设置表格左右外边距自适应(始终相等)--水平居中 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        td,th{ /* 选中当前网页中的所有td元素,以及所有的th */
+            /* 为单元格设置边框(宽度、样式) */
+            border: 2px solid red;
+            /* 设置单元格边框和内容之间的距离 */
+            padding: 5px;
+        }
+        h1{
+            /* 设置元素内容在水平方向居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>创建一个3*3的表格</h1>
+    <table>
+        <tr><!-- th和td都是单元格，但是th会自动居中并加粗 -->
+            <th>表头1</th>
+            <th>表头2</th>
+            <th>表头3</th>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+        </tr><tr>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>创建表格</title>
+
+<style type="text/css">
+	/* 为表格定义CSS样式 */
+	body{padding-left:15px;font-size:20px;}
+	table{ border:1px solid #0099FF; width:70%; border-collapse:collapse; }
+	table td{ border:#0099FF 1px solid; padding:10px 20px 3px 1px; }
+	input[type='text']{width:150px;height:20px;vertical-align:text-bottom;text-indent:5px;font-size:20px;}
+	input[type='button']{font-size:20px;}
+</style>
+
+<!-- 引入jquery函数库文件 -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	/** 练习1：创建单行单列的表格 */
+	function createTable1(){
+		
+	}
+
+	/** 练习2：创建5行6列的表格 */
+	function createTable2(){
+		
+	}
+
+	/** 练习3：创建指定行和列的表格 */
+	function createTable3(){
+		
+	}
+</script>
+</head>
+<body>
+	<!-- 练习1：点击下列按钮创建单行单列表格 -->
+	<input type="button" value="创建单行单列表格" onclick="createTable1()" /><br/><br/>
+
+	<!-- 练习2：点击下列按钮创建5行6列表格 -->
+	<input type="button" value="创建表格(5行6列)" onclick="createTable2()" /><br/><br/>
+
+	<!-- 练习3：点击下列按钮创建指定行、指定列的表格 -->
+	<input type="button" value="创建表格（输入行数和列数）" onclick="createTable3()" /><br/>
+	行数：<input type="text" id="rows"/><br/>
+	列数：<input type="text" id="cols"/><br/><br/>
+
+	<!-- 将创建的表格添加到body内部(追加到最后) --><hr/>
+	
+	
+	
+</body>
+</html>

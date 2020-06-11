@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>电灯开关案例</title>
+<style>
+	body{padding:20px;font-size:20px;}
+	#div1{width:30%;border:1px solid red;padding:5px;margin-bottom:20px;}
+</style>
+<!-- 引入jquery的js库
+<script src="js/jquery-1.8.3.min.js"></script> -->
+<script>
+	/** 练习：点击按钮，开灯或关灯 */
+	var flag=false;//false表示默认为关灯状态
+	function changeImg() {
+		//获取img元素，返回的是js对象
+		var img1 = document.getElementById("img1");
+		if(!flag){
+			//通过img元素调用src属性
+			img1.src="imgs/on.gif";
+		}else {
+			img1.src="imgs/off.gif";
+		}
+		flag=!flag;
+	}
+	</script>
+</head>
+<body>
+	<!-- onclick是为当前元素绑定点击事件
+	 点击当前元素就会触发点击事件，执行changeImg函数 -->
+	<input type="button" value="开/关灯"
+		onclick="changeImg()" /> <br/><br/>
+	<img id="img1" src="../imgs/off.gif"/>
+	
+</body>
+</html>
