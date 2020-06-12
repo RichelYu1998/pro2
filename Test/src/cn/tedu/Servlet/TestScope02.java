@@ -20,7 +20,7 @@ public class TestScope02 extends HttpServlet {
         //----------------------------------------------------------
         System.out.println("TestScope02.doGet()...");
         //从request对象的map集合中取出数据(数组)
-        String names = (String) request.getAttribute("names");
+        String[] names = (String[]) request.getAttribute("names");
         //做出响应
         out.write("测试(转发+域对象)带数据到目的地");
     }
