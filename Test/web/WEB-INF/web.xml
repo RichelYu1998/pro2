@@ -3,36 +3,4 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>cn.tedu.Servlet.HelloServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/HelloServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>cn.tedu.Servlet.TestServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/TestServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>TestParam</servlet-name>
-        <servlet-class>cn.tedu.Servlet.TestParam</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestParam</servlet-name>
-        <url-pattern>/TestParam</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>TestParam2</servlet-name>
-        <servlet-class>cn.tedu.Servlet.TestParam2</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestParam2</servlet-name>
-        <url-pattern>/TestParam2</url-pattern>
-    </servlet-mapping>
 </web-app>

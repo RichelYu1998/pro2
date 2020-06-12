@@ -1,8 +1,10 @@
 package cn.tedu.Servlet;
 
+import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+@WebServlet(name = "HelloServlet",urlPatterns = "/HelloServlet")
 public class HelloServlet extends javax.servlet.http.HttpServlet {
     private static final long serialVersionUID = -4893468351035679241L;
 
