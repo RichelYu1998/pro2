@@ -1,0 +1,8 @@
+@charset "UTF-8";
+body{
+	background:#ffaff5;
+}
+#newstext{
+	background:#eee5e1;
+	color:green;
+}

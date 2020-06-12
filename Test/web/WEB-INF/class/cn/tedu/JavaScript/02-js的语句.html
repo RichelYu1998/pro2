@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>js语句</title>
+<script>
+    /*
+    * js语句:
+    * 案例1:if分支结构案例: 接收用户输入的成绩, 判断成绩所属的等级
+    * 80~100(包括80，也包括100) 优秀
+    60~80(包括60，但不包括80) 中等
+    0~60(包括0，但不包括60) 不及格
+    其他值 输入有误
+    * */
+    //1.接收用户输入的成绩
+    var score = prompt("请输入您的成绩: ");
+    if (score >= 80 && score <= 100) {
+        alert("您的成绩属于: 优秀!");
+    } else if (score >= 60 && score < 80) {
+        alert("您的成绩属于: 中等!");
+    } else if (score >= 0 && score < 60) {
+        alert("您的成绩属于: 不及格!");
+    } else {
+        alert("您的输入有误, 请重新输入!");
+    }
+    //--------------------------------------
+    /*
+    * 案例2：switch语句案例—实现一个简易的计算器：
+    * 可以接收用户输入的两个数值和一个操作符(+、-、*、/)，
+    * 根据操作符号的不同，对两个数值执行不同的运算。
+    * */
+    //1.接收用户输入的数值和运算符，中间用空格分隔
+    var str = prompt("输入数值1、运算符、数值2，中间用空格分隔:");//"10 + 5"
+    //2.对用户输入的内容进行切割
+    var arr = str.split("");//["10", "+", "5"]
+    //var num1 = parseFloat(arr[0]);
+    var num1 = arr[0] - 0;
+    var opt = arr[1];
+    //var num2 = parseFloat(arr[2]);
+    var num2 = arr[2] - 0;
+    //3.通过switch分支实现计算器
+    switch (opt) {
+        case "+":
+            alert("两个数的和为:" + (num1 + num2));
+            break;
+        case "-":
+            alert("两个数的差为:" + (num1 - num2));
+            break;
+        case "+":
+            alert("两个数的乘积为:" + (num1 * num2));
+            break;
+        case "+":
+            alert("两个数的商为:" + (num1/num2));
+            break;
+        default:
+            alert("输入有误");
+    }
+
+    /*
+    * 案例3：for循环语句案例
+        遍历1\~100之间的所有整数，求1\~100之间所有整数的和，并输出到控制台;
+    * */
+    //--------------------------------------
+    var i = 1;
+    var sum = 0;
+    while( i <= 100 ){
+        sum += i;
+        i++;
+    }
+    alert( "1~100之间所有整数的和为: "+sum );
+    //--------------------------------------
+    var sum = 0;
+    for( var i=0; i<=100; i++){
+        sum += i;
+    }
+    alert( "1~100之间所有整数的和为: "+sum );
+    //--------------------------------------
+    /*
+    * 案例4：while循环语句案例
+    遍历下面数组中的元素，将元素输出到控制台。
+    * */
+    var arr = [123, "abc", false, new Object() ];
+    //声明数组下标，从零开始
+    var index = 0;
+    while( index < arr.length ){
+        //将内容输出到浏览器的控制台console
+        console.log( arr[index] );
+        index++;
+    }
+    for( var i=0; i<arr.length; i++ ){
+        console.log( arr[i] );
+    }
+
+    /* js声明数组 */
+    //声明数组
+    var arr1=new Array();
+    //获取数组的长度
+    console.log(arr1.length)
+    //声明一个具有初始值的数组
+    var arr2=new Array(88,"Hello",true,new Date());
+    console.log(arr2);
+    //声明一个空数组
+    var arr3=[];
+    console.log(arr3.length);
+    //声明一个具有初始值的数组
+    var arr4=[88,"Hello",true,new Date()];
+    console.log(arr4);
+    //js数组的长度是可以被任意改变的
+    var arr5=[];
+    console.log(arr5.length);//长度为0
+    arr5.length=10;//将数组的长度改为10
+    console.log(arr5.length);//长度为10
+    arr5[99]="index99";//数组长度自动提升为100
+    console.log(arr5.length);//长度为100
+    arr5.length=0;//将数组长度改为0
+    console.log(arr5.length)//长度为0
+
+    /* js的函数声明 */
+    function fn1(name,age) {
+        console.log(name+","+age);
+    }
+    fn1("PaPi酱",20);
+    //声明一个函数:接收一个数组，遍历数组中的元素，打印到控制台
+    function fn2(arr) {
+        for (var i = 0; i <arr.length ; i++) {
+            console.log(arr[i]);
+        }
+    }
+    //测试:声明一个数组，传给fn2函数
+    var arr6=[123,"hello",false,new Date()];
+    fn2(arr6);
+</script>
+</head>
+<body>
+
+</body>
+</html>
