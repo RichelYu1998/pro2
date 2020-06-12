@@ -19,4 +19,20 @@
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/TestServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>TestParam</servlet-name>
+        <servlet-class>cn.tedu.Servlet.TestParam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestParam</servlet-name>
+        <url-pattern>/TestParam</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TestParam2</servlet-name>
+        <servlet-class>cn.tedu.Servlet.TestParam2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestParam2</servlet-name>
+        <url-pattern>/TestParam2</url-pattern>
+    </servlet-mapping>
 </web-app>
