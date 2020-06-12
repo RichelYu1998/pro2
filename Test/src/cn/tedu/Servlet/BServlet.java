@@ -18,6 +18,9 @@ public class BServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
         System.out.println("BServlet.doGet()...");
+        //从request对象的map集合中取数据
+        String name = (String) request.getAttribute("name");
+        System.out.println("name="+name);
         out.write("请求转发测试成功");
     }
 }
