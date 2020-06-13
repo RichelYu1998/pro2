@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "TestRedirect01", urlPatterns = "/TestRedirect01")
-public class TestRedirect01 extends HttpServlet {
+@WebServlet(name = "TestServlet", urlPatterns = "/TestServlet")
+public class TestServlet extends HttpServlet {
+    private static final long serialVersionUID = 2721724247960474274L;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
     }
@@ -17,9 +19,6 @@ public class TestRedirect01 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-        //----------------------------------------------------------
-        System.out.println("TestRedirect01.doGet()...");
-        //请求重定向到TestRedirect02
-        response.sendRedirect("TestRedirect02");
+        out.write("你好");
     }
 }

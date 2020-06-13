@@ -8,17 +8,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "TestServlet",urlPatterns = "/TestServlet")
-public class TestServlet extends HttpServlet {
-    private static final long serialVersionUID = 2721724247960474274L;
-
+@WebServlet(name = "AServlet", urlPatterns = "/AServlet")
+public class AServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-        out.write("你好");
+        System.out.println("AServlet.doGet()...");
+        /*
+        *   将请求转发给BServlet，由BServlet进行响应
+        * (1)进行转发的两个资源必须属于同一个Web应用，否则失败
+        * (2)转发时的路径不可以出现当前Web应用的访问路径，因为服务器自动添加
+        * */
+        request.getRequestDispatcher("BServlet").forward(request,response);
     }
 }

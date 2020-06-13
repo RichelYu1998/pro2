@@ -12,6 +12,20 @@
 </head>
 <body>
 <%-- JSP表达式符号(可以写java代码，但是不可以写分号结束的语句) --%>
-    <%= new Date() %>
+<%= new Date() %>
+<%=100 + 123 %>
+<%="helo"%>
+<hr/>
+<%-- 2.jsp脚本片段(可以书写在java中) --%>
+<%
+    for (int i = 0; i < 5; i++) {
+        System.out.println("hello jsp");
+    }
+%>
+<%
+    for (int i = 0; i < 5; i++) {%>
+    Hello Jsp<br/>
+<%}%>
+<%-- 3.Jsp注释 --%>
 </body>
 </html>
