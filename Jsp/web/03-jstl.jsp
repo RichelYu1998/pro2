@@ -32,6 +32,23 @@ ${ name }
 
 <h3> 1 c:forEach标签</h3>
 <h5>1 遍历域中数组或集合中的元素</h5>
+<%
+String[] name={"王海涛","刘培霞","陈子姝","齐磊"};
+request.setAttribute("names",name);
+%>
+<%-- items：指定要遍历的数组或集合，如果数组或集合来自域中，可以使用nel获取
+    var:指定一个变量，用于接收数组或集合中的元素
+    varstatus:表示的是一个对象,该对象表示循环遍历的状态信息，属性有：
+    frist:boolean，如果是第一次则true，反之false
+    last:boolean，如果是最后一次则true，反之false
+    count:用于统计当前是第几回遍历
+    besgin：起始
+    end：终止
+    step:自增的值(默认是1)
+ --%>
+<c:forEach items="${names}" var="name" varStatus="vs">
+    ${vs.first},${vs.last},${name}<br/>
+</c:forEach>
 <h5>2 遍历域中的map集合中的元素</h5>
 <h5>3 遍历1-100之间所有的整数,将是3的倍数的数值输出</h5>
 
