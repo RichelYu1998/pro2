@@ -12,7 +12,9 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar!/" />
       <root url="jar://D:/Study/pro2/day11-jsp+jstl/jstl-1.2.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="http://java.sun.com/jsp/jstl/core" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>
