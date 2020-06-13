@@ -1,8 +1,0 @@
-@charset "UTF-8";
-/* @charset用于指定当前css文件的编码为utf-8 */
-p{
-    border: 2px solid blue;
-    color: red;
-    font-family: "华文琥珀";
-    text-indent: 50px;
-}
