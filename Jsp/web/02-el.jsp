@@ -1,7 +1,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Map" %><%--
+<%@ page import="java.util.Map" %>
+<%@ page import="cn.tedu.pojo.User" %><%--
   Created by IntelliJ IDEA.
   User: 余浩
   Date: 2020/6/13
@@ -68,5 +69,17 @@ ${map1.age}
 ${map1.addr}
 <hr/>
 <h3>EL用法4:获取作用域中JavaBean对象的属性值</h3>
+<%
+//声明一个User对象，并将User对象存入域中
+    User u1 = new User();
+    u1.setName("PaPi酱");
+    u1.setAge(18);
+    u1.setAddr("上海");
+    request.setAttribute("user",u1);
+%>
+${user.name}
+${user.age}
+${user.addr}
+<hr/>
 </body>
 </html>
