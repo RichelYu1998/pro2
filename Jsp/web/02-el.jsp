@@ -32,6 +32,7 @@ ${age1}
     在寻找时，会按照如下作用域的顺序去寻找，找到就返回
     pageContext、request、session、application
 --%>
+
 <h3>EL用法2:获取作用域中数组或集合中的元素</h3>
 <%
 //声明一个数组，并将数组存入域中
@@ -65,6 +66,7 @@ ${list[3]}
 ${map1.name}
 ${map1.age}
 ${map1.addr}
+<hr/>
 <h3>EL用法4:获取作用域中JavaBean对象的属性值</h3>
 </body>
 </html>
