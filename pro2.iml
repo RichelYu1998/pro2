@@ -24,11 +24,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/Test/web/WEB-INF/lib" />
+          <root url="file://$MODULE_DIR$/Servlet/web/WEB-INF/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/Test/web/WEB-INF/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/Servlet/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

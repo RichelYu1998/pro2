@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档就绪事件函数</title>
+    <!-- 引入jQuery函数库文件 -->
+    <script src="js/jquery-1.8.3.js"></script>
+    <script>
+        /*
+    * 获取id为demo的元素中的所有内容，并通过alert弹出
+    * 文档就绪事件函数:会在浏览器加载当前网页中的所有元素后立即执行
+    * 由于下面的function在执行时，浏览器已经加载完所有的html元素，
+    * 所以此时再获取id为demo的元素，一定可以获取到
+    * */
+        $(function () {
+            //获取id为demo的元素
+            var oH1 = document.getElementById("demo");
+            //再获取元素中的所有内容(innerHTML)
+            alert(oH1.innerHTML);
+        });
+        function fn1() {
+            //获取id为demo的元素
+            var oH1 = document.getElementById("demo");
+            //再获取元素中的所有内容(innerHTML)
+            alert(oH1.innerHTML);
+        }
+    </script>
+</head>
+<body>
+<h1 id="demo" onclick="fn1()">Hello CGB2004</h1>
+<!--<script>
+    /*
+    * 获取id为demo的元素中的所有内容，并通过alert弹出
+    * */
+    //获取id为demo的元素
+    var oH1 = document.getElementById("demo");
+    //获取元素中的所有内容(innerHTML)
+    alert(oH1.innerHTML);
+</script>-->
+</body>
+</html>

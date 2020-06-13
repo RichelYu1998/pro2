@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器练习</title>
+    <style type="text/css">
+        body {
+            font-family: "微软雅黑";
+            font-size: 20px;
+            padding-bottom: 300px;
+        }
+
+        input {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        div, span {
+            width: 300px;
+            border: 1px solid #000;
+            padding-left: 10px;
+            background: #bed4ef;;
+        }
+
+        span {
+            display: block;
+        }
+
+        body > div, body > span {
+            height: 100px;
+            margin: 10px 0px 0px 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #one {
+            width: 300px;
+            height: 185px;
+        }
+
+        div > span, div > div {
+            width: 250px;
+            height: 35px;
+            margin: 10px;
+        }
+    </style>
+    <!-- 引入jquery函数库文件 -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!-- 测试JQuery引用是否成功 -->
+    <script>
+        //function函数会在整个文档被浏览器加载之后立即执行
+        jQuery(function () {
+            alert("如果可以看见弹窗，那么引用jQuery成功")
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            /* -------一、基本选择器练习------- */
+            /* 1、选中id为b1的按钮,为b1按钮绑定点击事件，点击b1按钮：改变所有 div 元素的背景色为 #FD5551 */
+            $("#b1").click(function () {
+                $("div").css("background", "#FD5551");
+            });
+            /* 2、选中id为b2的按钮,为b2按钮绑定点击事件，点击b2按钮：改变 id 为 one 的元素的背景色为 #91BF2F */
+            //通过css函数为元素设置多个css样式
+            $("#b2").click(function () {
+                $("#one").css("background", "#91BF2F")
+            });
+            $("#b2").css({
+                "background": "#91BF2F",
+                "border": "3px solid red",
+                "color": "blue",
+                "font-weight": "bolder"
+            });
+            /* 3、选中id为b3的按钮,为b3按钮绑定点击事件，点击b3按钮：
+            改变 class 为 mini 的所有元素的背景色为 #EE82EE */
+            $("#b3").click(function () {
+                $(".mini").css("background", "#EE82EE");
+            });
+            /* ---------二、层级选择器------- */
+            /* 4、选中id为b4的按钮,为b4按钮绑定点击事件，点击b4按钮：改变 div 内所有 span 的背景色为 #DC21D2 */
+            $("#b4").click(function () {
+                $("div span").css("background", "#DC21D2");
+            });
+            /* 5、选中id为b5的按钮,为b5按钮绑定点击事件，点击b5按钮：改变 id为two 元素的下一个相邻的 div元素 的背景色为 #2CADAA */
+            //(选择器方式)获取id为two的元素下一个相邻的div元素
+            $("#b5").click(function () {
+                /*$("#two+div").css("background", "#2CADAA");*/
+                //(函数方式)获取id为two的元素的下一个相邻div元素
+                $("#two").next("div").css("background", "#2CADAA");
+                //(函数方式)获取id为two的元素的前一个相邻div元素
+                $("#two").prev("div").css("background", "#2CADAA");
+            });
+            /* 6、选中id为b6的按钮,为b6按钮绑定点击事件，点击b6按钮：改变 id为two 元素的后面所有的div兄弟元素 的背景色为 #ECD822 */
+            $("#b6").click(function () {
+                //获取id为two的元素后面所有div兄弟元素
+                $("#two").nextAll("div").css("background", "#ECD822");
+                //获取id为two的元素前面所有div兄弟元素
+                $("#two").prevAll("div").css("background", "#ECD822");
+            });
+            /* 7、选中id为b7的按钮,为b7按钮绑定点击事件，点击b7按钮：改变 id为two 元素的前、后所有的div兄弟元素 的背景色为 #EE0077 */
+            $("#b7").click(function () {
+                //获取id为two的元素前、后所有div兄弟元素
+                $("#two").siblings("div").css("background", "#EE0077");
+            });
+            /* ---------三、基本过滤选择器------- */
+            /* 8、选中id为b8的按钮,为b8按钮绑定点击事件，点击b8按钮：改变第一个以及最后一个 div 元素的背景色为 #0074E8 */
+            $("#b8").click(function () {
+                //获取第一个div元素
+                $("div:eq(0)").css("background","#0074E8");
+                /*$("div").eq(0).css("background","#0074E8");*/
+               /* $("div:first").css("background","#0074E8");*/
+                //获取最后一个div元素
+                $("div:eq(-1)").css("background","#FFFF00");
+                /*$("div:last").css("background","#FFFF00");*/
+                /*$("div").eq(-1).css("background","#FFFF00");*/
+            });
+            /* 9、选中id为b9的按钮,为b9按钮绑定点击事件，点击b9按钮：改变第4个 div 元素的背景色为 #D917C6 */
+            $("#b9").click(function () {
+                $("div:eq(3)").css("background","#D917C6");
+            });
+        });
+
+    </script>
+</head>
+<body>
+基本选择器→:
+<!-- 按钮，id为b1 -->
+<input type="button" id="b1" value="b1,改变所有div元素的背景色为 #FD5551"/>
+<!-- 按钮，id为b2 -->
+<input type="button" id="b2" value="b2,改变id为one的元素的背景色为 #91BF2F"/>
+<!-- 按钮，id为b3 -->
+<input type="button" id="b3" value="b3,改变class为mini的元素的背景色为 #EE82EE"/>
+<hr/>
+层级选择器→:
+<!-- 按钮，id为b4 -->
+<input type="button" id="b4" value="b4,改变所有div元素的背景色为 #DC21D2"/>
+<!-- 按钮，id为b5 -->
+<input type="button" id="b5" value="b5,改变id为two元素的下一个相邻的div元素的背景色为 #2CADAA"/>
+<!-- 按钮，id为b6 -->
+<input type="button" id="b6" value="b6,改变id为two元素的后面所有的div兄弟元素的背景色为 #ECD822"/>
+<!-- 按钮，id为b7 -->
+<input type="button" id="b7" value="b7,改变id为two元素的前、后所有的div兄弟元素的背景色为 #EE0077"/>
+<hr/>
+基本过滤选择器→:
+<!-- 按钮，id为b8 -->
+<input type="button" id="b8" value="b8,改变第一个/最后一个div元素背景色为 #0074E8"/>
+<!-- 按钮，id为b9 -->
+<input type="button" id="b9" value="b9,改变第4个div元素背景色为 #D917C6"/>
+<h3>点击按钮查看效果</h3>
+<div id="one">
+    这是一个div1
+    <div class="one01">这是一个div11</div>
+    <span class="mini">这是一个span,class为mini</span>
+    <span class="mini">这是一个span,class为mini</span>
+</div>
+<div>
+    这是一个div2
+    <input type="button" value="按钮1"/>
+    <input type="button" value="按钮2"/>
+</div>
+<div id="two">这是一个div3,id是two
+    <span>这是一个span</span>
+</div>
+<div>这是一个div4</div>
+<div>这是一个div5</div>
+<span class="mini">这是一个span，class为mimi</span>
+<div>这是一个div6</div>
+<span class="mini01">这是一个span，class为mimi01</span>
+<span class="mini">这是一个span，class为mimi</span>
+</body>
+</html>
