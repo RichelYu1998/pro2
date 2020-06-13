@@ -62,9 +62,9 @@ ${list[3]}
     map.put("addr","中国");
     request.setAttribute("map1",map);
 %>
-${
-map1
-}
+${map1.name}
+${map1.age}
+${map1.addr}
 <h3>EL用法4:获取作用域中JavaBean对象的属性值</h3>
 </body>
 </html>
