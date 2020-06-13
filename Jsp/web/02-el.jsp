@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 余浩
   Date: 2020/6/13
@@ -30,7 +31,26 @@ ${age1}
     pageContext、request、session、application
 --%>
 <h3>EL用法2:获取作用域中数组或集合中的元素</h3>
-
+<%
+//声明一个数组，并将数组存入域中
+    String[] names={"孙尚香","黄忠","马可波罗","成吉思汗"};
+    request.setAttribute("names",names);
+    List list = new ArrayList<>();
+    list.add("安琪拉");
+    list.add("王昭君");
+    list.add("小乔");
+    list.add("墨子");
+    request.setAttribute("list",list);
+%>
+${names[0]}
+${names[1]}
+${names[2]}
+${names[3]}
+<hr/>
+${list[0]}
+${list[1]}
+${list[2]}
+${list[3]}
 <h3>EL用法3:获取作用域中map集合中的元素</h3>
 <h3>EL用法4:获取作用域中JavaBean对象的属性值</h3>
 </body>
