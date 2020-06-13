@@ -1,5 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: 余浩
   Date: 2020/6/13
@@ -52,6 +54,17 @@ ${list[1]}
 ${list[2]}
 ${list[3]}
 <h3>EL用法3:获取作用域中map集合中的元素</h3>
+<%
+//声明一个map集合并将map集合存入域中
+    Map map = new HashMap<>();
+    map.put("name","尼古拉斯.赵四");
+    map.put("age",35);
+    map.put("addr","中国");
+    request.setAttribute("map1",map);
+%>
+${
+map1
+}
 <h3>EL用法4:获取作用域中JavaBean对象的属性值</h3>
 </body>
 </html>
