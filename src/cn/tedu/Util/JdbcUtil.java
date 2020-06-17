@@ -20,7 +20,7 @@ public class JdbcUtil {
         Connection conn = DriverManager.getConnection(
                 "jdbc:mysql:///jt_db?characterEncoding=utf-8&serverTimezone=GMT%2B8",
                 "root",
-                "1234");
+                "Syp950628");
         return conn;
     }
 
